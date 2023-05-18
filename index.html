@@ -43,7 +43,7 @@
             <p> Solo disponible para estudiantes de UDG</p>
         </div> 
      </section>
- 
+     
      <section class="content-cards">
         <h2 class="titulo">Nuestros servicios</h2>
         <div class="content-cards">
@@ -85,10 +85,55 @@
         </article>
     </div>
 </section>
+
 <section class="info-last">
-    <div class="svg-wave" style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.99 C150.00,150.00 349.20,-49.99 500.00,49.99 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #f5576c;"></path></svg></div>
+    <div class="contenedor last-section">
+        <div class="contenedor-textos-main">
+        <h2 class="titulo-left">Aprende ya los lenguajes más usados! </h2>
+        </div>
+            <div class="carousel-container">
+                <img class="carousel-image" src="imagenes/c1.jpg" alt="">
+                <img class="carousel-image" src="imagenes/java1.jpg" alt="">
+                <img class="carousel-image" src="imagenes/javascript1.jpg" alt="">
+                <img class="carousel-image" src="imagenes/python1.png" alt="">
+                <button class="carousel-button" onclick="previousImage()">Anterior</button>
+                <button class="carousel-button" onclick="nextImage()">Siguiente</button>
+            </div>
+        
+            <script>
+                var images = document.getElementsByClassName('carousel-image');
+                var currentIndex = 0;
+                var intervalId;
+        
+                // Función para mostrar la siguiente imagen
+                function nextImage() {
+                    clearInterval(intervalId);
+                    images[currentIndex].style.display = 'none';
+                    currentIndex = (currentIndex + 1) % images.length;
+                    images[currentIndex].style.display = 'block';
+                    startInterval();
+                }
+        
+                // Función para mostrar la imagen anterior
+                function previousImage() {
+                    clearInterval(intervalId);
+                    images[currentIndex].style.display = 'none';
+                    currentIndex = (currentIndex - 1 + images.length) % images.length;
+                    images[currentIndex].style.display = 'block';
+                    startInterval();
+                }
+        
+                // Función para iniciar el desplazamiento automático
+                function startInterval() {
+                    intervalId = setInterval(nextImage, 3000); // Cambiar imagen cada 3 segundos
+                }
+        
+                // Iniciar el desplazamiento automático al cargar la página
+                startInterval();
+            </script>
+</div> 
+<div class="svg-wave" style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.99 C150.00,150.00 349.20,-49.99 500.00,49.99 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #f5576c;"></path></svg></div>
 </section>
- 
 
   <footer>
     <p>&copy; 2023 Alcest. Todos los derechos reservados.</p>
