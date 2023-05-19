@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title>Contacto</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <link href="styles2.css" rel="stylesheet">
+</head>
+<body>
+    <h1>¡Contáctanos!</h1>
+    <div id="map" style="height: 400px;">
+        <script>
+            var map = L.map('map').setView([20.655023268972577, -103.32542810246092], 13);
+          
+            
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+              attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+              maxZoom: 18
+            }).addTo(map);
+          
+           
+            L.marker([20.655023268972577, -103.32542810246092]).addTo(map)
+              .bindPopup('CUCEI (Centro de Ciencias Exactas e Ingenierias)')
+              .openPopup();
+          </script>
+          
+    
+    </div>
+    <div class="whatsapp">
+        <h2>Haz click en el icono de whatsapp para ir al chat</h2>
+        <a href="https://api.whatsapp.com/send?phone=3319171630" target="_blank"><img src="imagenes/whatsapp.png">
+          </a>
+    </div>
+    <div class="correo">
+        <h2>haz click en el icono de gmail para enviar un correo</h2>
+        <a href="mailto:vanessa.santillan5344@alumnos.udg.mx"><img src="imagenes/gmail.png"></a>
+
+    </div>
+
+</body>
+</html>

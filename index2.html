@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link  href="styles1.css" rel="stylesheet"/>
+        <title>Agendar tutoria</title>
+    </head>
+    <body>
+        <div class="menu">
+
+        <main>
+            <h1>Alcest tutorias</h1>
+            <p class="established">Est. 2020</p>
+            <hr>
+            <section>
+                <article class="item">
+            <h2>Ingresa tus datos</h2>
+            <form id="miFormulario">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" required>
+              
+                <label for=codigoUDG">Código UDG:</label>
+                <input type="text" id="codigoUDG" pattern="\d{9}" required>
+              
+                <label for="materia">Materia de la que requieres tutoria:</label>
+                <input type="text" id="materia" required>
+              
+                <button type="submit">Enviar</button>
+              </form>
+            
+              <script src="form.js"></script>
+           
+              </article>
+          
+            </section>
+        </main>
+    </body>
+    <hr>
+    <footer>
+        <p class="last">&copy; 2023 Alcest. Todos los derechos reservados.</p>
+    </footer>
+</div>
+</html>

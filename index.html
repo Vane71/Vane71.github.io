@@ -15,13 +15,28 @@
     <div class="text-hero">
     <h1>Tutorías en Línea</h1>
     <nav>
-      <ul>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Tutores</a></li>
-        <li><a href="#">Agendar Tutoría</a></li>
-        <li><a href="#">Contacto</a></li>
-        <li><a href="#">Biblioteca</a></li>
+      <ul id="miLista">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="index1.html">Tutores</a></li>
+        <li><a href="index2.html">Agendar Tutoría</a></li>
+        <li><a href="index3.html">Contacto</a></li>
+        <li><a href="https://z-library.es/">Biblioteca</a></li>
       </ul>
+      <script>
+const lista = document.getElementById('miLista');
+const elementos = lista.getElementsByTagName('a');
+
+
+for (let i = 0; i < elementos.length; i++) {
+  elementos[i].addEventListener('click', redireccionar);
+}
+
+function redireccionar(event) {
+  event.preventDefault(); 
+  
+  const urlDestino = event.target.getAttribute('href'); 
+  window.location.href = urlDestino; 
+}</script>
     </nav>
 </div>
 <div class="svg-hero" style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.99 C150.00,150.00 349.20,-49.99 500.00,49.99 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #ffffff;"></path></svg></div>
@@ -105,7 +120,7 @@
                 var currentIndex = 0;
                 var intervalId;
         
-                // Función para mostrar la siguiente imagen
+                
                 function nextImage() {
                     clearInterval(intervalId);
                     images[currentIndex].style.display = 'none';
@@ -114,7 +129,7 @@
                     startInterval();
                 }
         
-                // Función para mostrar la imagen anterior
+                
                 function previousImage() {
                     clearInterval(intervalId);
                     images[currentIndex].style.display = 'none';
@@ -123,12 +138,12 @@
                     startInterval();
                 }
         
-                // Función para iniciar el desplazamiento automático
+                
                 function startInterval() {
                     intervalId = setInterval(nextImage, 3000); // Cambiar imagen cada 3 segundos
                 }
         
-                // Iniciar el desplazamiento automático al cargar la página
+                
                 startInterval();
             </script>
 </div> 
